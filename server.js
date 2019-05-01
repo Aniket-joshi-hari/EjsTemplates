@@ -52,6 +52,10 @@ app.get('/test', function(req, res) {
     res.render('pages/invoicef');
 });
 
+app.get('/orderp', function(req, res) {
+    res.render('pages/orderp');
+});
+
 app.get('/inv', function(req, res) {
     res.render('pages/invoice');
 });
@@ -67,6 +71,9 @@ app.get('/customize', function(req, res) {
 
 app.get('/zypher', function(req, res) {
     res.render('pages/zypher');
+});
+app.get('/wtest',function(req, res){
+    res.render('pages/testwelcome')
 });
 
 app.listen(8080);
