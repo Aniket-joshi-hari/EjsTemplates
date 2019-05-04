@@ -1,407 +1,429 @@
 <!DOCTYPE html>
 <html lang="eng">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 <head>
-    
-    <link rel="shortcut icon" href="./title.png" />
-<title>Invoice</title>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<style type="text/css">
-.ReadMsgBody {width: 100%;}
-.ExternalClass {width: 100%;}
-.mobile {display: none;overflow: hidden;visibility:hidden;}
-strong{font-weight: bold;}
-
-body{
-  
-  font-family: sans-serif;
-  font-size:14px;
-}
-	@media only screen and (max-width: 600px){ /**change to max-device-width after testing**/
-		
-	     
-     
-		 td[class="mobile_only"],  img[class="mobile_only"], div[class="mobile_only"], tr[class="mobile_only"] {
-			display: block !important;
- 			width: auto !important;
-  			overflow: visible !important;
-			height: auto !important;
-			max-height: inherit !important;
-			font-size: 15px !important;
-			line-height: 21px !important;
-			visibility: visible !important;
-	     }		 
-		 
-		 img[class="mobile_header"] { 
-		 	width: 100% !important;
-			height: 243px !important;
-			display: block !important; 			
-  			overflow: visible !important;
-			visibility: visible !important;}
-		 
-		 td[class="full_width"], table[class="full_width"] {
-	          width: 100%!important;
-	     }
-	    
-		 td[class="medium_width"], table[class="medium_width"] {
-	          width: 100% !important;
-	     }
-		 	 
-		 td[class="intro_text"], table[class="intro_text"] {
-	     	font-size: 14px !important;
-			line-height: 20px !important;
-	     }
-		
-	}
-
- /* table styles */
-
-    .table1{
-        background: #F37621;
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./title.png" />
+  <title>Invoice</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style type="text/css">
+    .ReadMsgBody {
+      width: 100%;
     }
 
-   
-    .header-content{
-      height:40px;
-      color:#fff;
-      
+    .ExternalClass {
+      width: 100%;
     }
 
-    .user-data{
-      border:1px solid rgba(0,0,255,0.3);
-      width:95%;
+    .mobile {
+      display: none;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    body {
+
+      font-family: sans-serif;
+      font-size: 14px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      /**change to max-device-width after testing**/
+
+
+
+      td[class="mobile_only"],
+      img[class="mobile_only"],
+      div[class="mobile_only"],
+      tr[class="mobile_only"] {
+        display: block !important;
+        width: auto !important;
+        overflow: visible !important;
+        height: auto !important;
+        max-height: inherit !important;
+        font-size: 15px !important;
+        line-height: 21px !important;
+        visibility: visible !important;
+      }
+
+      img[class="mobile_header"] {
+        width: 100% !important;
+        height: 243px !important;
+        display: block !important;
+        overflow: visible !important;
+        visibility: visible !important;
+      }
+
+      td[class="full_width"],
+      table[class="full_width"] {
+        width: 100% !important;
+      }
+
+      td[class="medium_width"],
+      table[class="medium_width"] {
+        width: 100% !important;
+      }
+
+      td[class="intro_text"],
+      table[class="intro_text"] {
+        font-size: 14px !important;
+        line-height: 20px !important;
+      }
+
+    }
+
+    /* table styles */
+
+    .table1 {
+      background: #F37621;
+    }
+
+
+    .header-content {
+      height: 40px;
+      color: #fff;
+
+    }
+
+    .user-data {
+      border: 1px solid rgba(0, 0, 255, 0.3);
+      width: 95%;
       box-sizing: border-box;
     }
 
-    .user-input1{
-      background:fef6f2;
+    .user-input1 {
+      background: fef6f2;
     }
 
 
-    table.d{
-  border:1px solid rgba(0,0,255,0.3);
-  table-layout: fixed;
-  width: 95%; 
-  border-collapse: collapse;
-  overflow:scroll;
+    table.d {
+      border: 1px solid rgba(0, 0, 255, 0.3);
+      table-layout: fixed;
+      width: 95%;
+      border-collapse: collapse;
+      overflow: scroll;
 
     }
-    table.d td{
-      padding-left:9px; 
-      margin-top:6px;
-      height:55px;
-      overflow:hidden;
-    } 
 
-
-    .d th{
-     text-align:left;
-     background: #F37621;
-     color:#fff;
-     padding-left:9px; 
-     height:30px;
-     overflow:hidden;
-    }
-    table.d  tr:nth-child(odd) {
-      background:#fce4d7;
+    table.d td {
+      padding-left: 9px;
+      margin-top: 6px;
+      height: 55px;
+      overflow: hidden;
     }
 
-    table.d  tr:nth-child(even) {
-      background:#fef6f2;
+
+    .d th {
+      text-align: left;
+      background: #F37621;
+      color: #fff;
+      padding-left: 9px;
+      height: 30px;
+      overflow: hidden;
     }
 
-    
-    table.additional-detail{
-  table-layout: fixed;
-  width: 95%; 
-  
+    table.d tr:nth-child(odd) {
+      background: #fce4d7;
+    }
+
+    table.d tr:nth-child(even) {
+      background: #fef6f2;
+    }
+
+
+    table.additional-detail {
+      table-layout: fixed;
+      width: 95%;
+
 
 
     }
-    .header-text{
-      font-size:18px;
+
+    .header-text {
+      font-size: 18px;
       font-weight: 500;
     }
 
-    table.additional-detail td{
-      height:25px ;
-      
-    
+    table.additional-detail td {
+      height: 25px;
+
+
     }
+
     /* button */
-   
-    .invoice-btn{
-      width:50%;
-      padding:10px;
-      text-align:left;
-      background:#F37621;
-      color:#fff;
-      border:none;
-      margin-top:10%;
-      font-size:16px;
+
+    .invoice-btn {
+      width: 50%;
+      padding: 10px;
+      text-align: left;
+      background: #F37621;
+      color: #fff;
+      border: none;
+      margin-top: 10%;
+      font-size: 16px;
       letter-spacing: 0.2em;
       font-weight: bold;
-      
-    }
-
-
-    table.footer{
-      
-  table-layout: fixed;
-  width: 95%; 
-  border-collapse: collapse;
- 
-    }
-
-    table.footer td{
-      height:26px;
-    }
-
-    table.footer th{
-      text-align:left;
-      height:26px;
-    }
-
-
-    table.invoice{
-  table-layout: fixed;
-  width: 95%; 
-  border-collapse: collapse;
 
     }
 
-    table.invoice th{
-      text-align:left;
-    font-size:16px;
-    height:10%;
-    margin-top:10px;
-    
-    }
 
-    table.invoice td{
-      text-align:left;
-    }
+    table.footer {
 
-    .footer-contact{
       table-layout: fixed;
-      width: 95%; 
-      border-collapse: collapse;  
+      width: 95%;
+      border-collapse: collapse;
+
     }
-    .footer-contact th{
-      text-align:left;
-    font-size:16px;
+
+    table.footer td {
+      height: 26px;
+    }
+
+    table.footer th {
+      text-align: left;
+      height: 26px;
+    }
+
+
+    table.invoice {
+      table-layout: fixed;
+      width: 95%;
+      border-collapse: collapse;
+
+    }
+
+    table.invoice th {
+      text-align: left;
+      font-size: 16px;
+      height: 10%;
+      margin-top: 10px;
+
+    }
+
+    table.invoice td {
+      text-align: left;
+    }
+
+    .footer-contact {
+      table-layout: fixed;
+      width: 95%;
+      border-collapse: collapse;
+    }
+
+    .footer-contact th {
+      text-align: left;
+      font-size: 16px;
     }
 
 
     /* for footer */
-  
-
-td[class="full_width"]{
-  width:70%;
-  
-}
 
 
-@media only screen and (max-width: 280px){
+    td[class="full_width"] {
+      width: 650px;
 
-  td[class="full_width"]{
-
-  text-overflow: ellipsis;
-
-  /* Required for text-overflow to do anything */
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-  
-}
-
-td[class="desktop"] img{
-     
-     width:36%;
-     height:80%;
-
-   }
-  
-
-
-
-
-
-@media only screen and (max-width: 500px){
-table td[colspan="2.5"]{
-  display:none;
-  
-}
-td[class="desktop"]{
-     
-     height:70px;
-
-   }
-
-  td[colspan="4.1"]{
-  display: none;
-}
-.invoice-btn{
-  width:800%;
-}
-}
-
-@media only screen and (max-width: 600px){
- 
-
-    td[class="full_width"], table[class="full_width"]{
-     width:100% !important;
-  
     }
-      
-  
-
-  }
 
 
-  .container-flex{
-    display: -webkit-flex;
-  display: flex;
-    flex-direction: column;
-    width:40%;
-   
+    @media only screen and (max-width: 280px) {
 
-  }
-  
-    
+      td[class="full_width"] {
 
-  .row{
-   
-    font-size:16px;
-    background:#fef6f2;
+        text-overflow: ellipsis;
 
-  }
-  .row span{
-    text-align:left;
-    padding:none;
-    margin:none;
-  }
-  
+        /* Required for text-overflow to do anything */
+        white-space: nowrap;
+        overflow: hidden;
+      }
 
- 
-  
-</style>
+
+    }
+
+    td[class="desktop"] img {
+
+      width: 36%;
+      height: 80%;
+
+    }
+    @media only screen and (max-width: 500px) {
+      table td[colspan="2.5"] {
+        display: none;
+
+      }
+
+      td[class="desktop"] {
+
+        height: 70px;
+
+      }
+
+      td[colspan="4.1"] {
+        display: none;
+      }
+
+      .invoice-btn {
+        width: 800%;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      td[class="full_width"],
+      table[class="full_width"] {
+        width: 100% !important;
+
+      }
+    }
+
+
+    .container-flex {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+
+    }
+
+    .row {
+
+      font-size: 16px;
+      background: #fef6f2;
+
+    }
+
+    .row span {
+      text-align: left;
+      padding: none;
+      margin: none;
+    }
+  </style>
 
 </head>
 <script>
-const name={name:'firstName',lname:'hello'};
-      
-    </script>
-   
-   
-<body style=" margin:0; padding:0;-webkit-font-smoothing: antialiased;width:100% !important;-webkit-text-size-adjust:none;" topmargin="0"><div style="font-size: 1px; color: #f5f5f5; display: none;">Short description appears as email content preview.</div>
+  const name = {
+    name: 'firstName',
+    lname: 'hello'
+  };
+</script>
+
+
+<body
+  style=" margin:0; padding:0;-webkit-font-smoothing: antialiased;width:100% !important;-webkit-text-size-adjust:none;"
+  topmargin="0">
+  
 
   <%
     var details={name:'Aniket',id:'a1234',date:'25/4/19',total:'12000 ',subTotal:'6000'};
 %>
 
-   
-<!-- spacer -->
 
-<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-    <tr>  
-       <td height="12" bgcolor="#fff" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+  <!-- spacer -->
+
+  <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="12" bgcolor="#fff" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
     </tr>
-</table>
+  </table>
 
-<!-- spacer again -->
-<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-    <tr>  
-       <td height="12" bgcolor="#fff" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+  <!-- spacer again -->
+  <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="12" bgcolor="#fff" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
     </tr>
-</table>
+  </table>
 
-<!-- wrapper table-->
+  <!-- wrapper table-->
 
-<table width="100%" bgcolor="#fff"  border="0" cellpadding="0" cellspacing="0">
-  <tr>
-	<td>&nbsp;
-           
-    </td>
+  <table width="100%" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td>&nbsp;
 
-    <td class="full_width"  align="center" style=" overflow:hidden;background:#fef6f2;border-left:1px solid #d8d8d8; border-right:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8; border-top:1px solid #d8d8d8; ">
+      </td>
 
-      <!-- header image -->
-      <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>  
-               <td height="100" style="font-size: 0px; line-height: 0px;background:#fef6f2 ;">&nbsp;</td>
-            </tr>
-         </table>
-      <table  width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td class="desktop" height="95"  width="100%"  style="display:flex; justify-content:flex-end;background: #F37621;align-items:center;"><img  style="margin-right:8%;" vspace="0" hspace="0" border="0"  src="./logo.png"  alt="Headline here" /></td>
+      <td class="full_width" align="center"
+        style=" overflow:hidden;background:#fef6f2;border-left:1px solid #d8d8d8; border-right:1px solid #d8d8d8; border-bottom:1px solid #d8d8d8; border-top:1px solid #d8d8d8; ">
+
+        <!-- header image -->
+        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="100" style="font-size: 0px; line-height: 0px;background:#fef6f2 ;">&nbsp;</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="95" width="100%"
+              style="background: #F37621;align-items:center;">
+              <table><tr><td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td width="100">&nbsp;</td>
+                <td height="95" width="200" >             
+                <img  
+                style="" vspace="0"height="100" width="180" hspace="0" border="0" src="./logo.png" alt="Headline here" /></td>
+              </td>
+              </tr></table>
         
-        </tr>
-     </table>
-    
-   
-    
-     
-     <!-- spacer -->
-     <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fef6f2">
-        <tr>  
-           <td height="22" bgcolor="#fef6f2" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
-        </tr>
-    </table>
+        <!-- spacer -->
+        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fef6f2">
+          <tr>
+            <td height="22" bgcolor="#fef6f2" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+          </tr>
+        </table>
+        <table class="invoice" bgcolor="#fef6f2">
+          <tr>
+            <th> Invoice To:</th>
+            <td>
+              <table>
+                <tr>
+                  <th>Invoice#:</th>
+                  <td><%= details.id %></td>
+                </tr>
+              </table>
+            </td>
 
+          </tr>
+          <tr>
+            <td id="output"><%= details.name %> </td>
+            <td>
+              <table>
+                <tr>
+                  <th>Invoice Date:</th>
+                  <td><%= details.date %></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
 
-     <table class="invoice" bgcolor="#fef6f2">
-        <tr>
-          <th> Invoice To:</th>
-          <td  > <table><tr><th>Invoice#:</th><td><%= details.id %></td></tr></table></td>
-        
-          
+        </table>
+        <!--spacer-->
 
-        </tr>
-        <tr>
-          <td  id="output"><%= details.name %> </td>
-          <td><table><tr><th>Invoice Date:</th><td><%= details.date %></td></tr></table></td>
-        </tr>
-        
-      </table>
-      
+        <table align="center" bgcolor="#fef6f2" width="100%" border="0" cellpadding="0" cellspacing="0"
+          style="font-size: 0px; line-height: 0px;background:#fef6f2 ;">
+          <tr>
+            <td height="24" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+          </tr>
+        </table>
 
-           
-        
-    
-  
-    
-     
-      
-     <!--spacer-->
-      
-      <table align="center" bgcolor="#fef6f2" width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 0px; line-height: 0px;background:#fef6f2 ;">
-        <tr>  
-           <td height="24" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
-        </tr>
-      </table>
-       
-      <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 0px; line-height: 0px;background:#fef6f2 ;">
-            <tr>  
-               <td height="24" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
-            </tr>
-          </table>
-           
-           
+        <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0"
+          style="font-size: 0px; line-height: 0px;background:#fef6f2 ;">
+          <tr>
+            <td height="24" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+          </tr>
+        </table>
+        <!-- importing file -->
 
-
-
-
-      <!-- importing file -->
-
-      <table class="d">
+        <table class="d">
           <tr>
             <th>SL</th>
             <th colspan="3">Item Description</th>
-            
+
             <th>Price</th>
             <th>Qty</th>
             <th>Total</th>
@@ -410,146 +432,124 @@ const name={name:'firstName',lname:'hello'};
           <tr>
             <td>1</td>
             <td colspan="3"></td>
-           
+
             <td>p</td>
             <td>Qty</td>
             <td>Total</td>
           </tr>
           <tr>
-              <td>2</td>
-              <td colspan="3">Maria Anders</td>
-              
-              <td>Price</td>
-              <td>Qty</td>
-              <td>Total</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td colspan="3">Maria Anders</td>
-                
-                <td>Price</td>
-                <td>Qty</td>
-                <td>Total</td>
-              </tr>
+            <td>2</td>
+            <td colspan="3">Maria Anders</td>
 
-              <tr>
-                  <td>4</td>
-                  <td colspan="3">Maria Anders</td>
-                  
-                  <td>Price</td>
-                  <td>Qty</td>
-                  <td>Total</td>
-                </tr>
+            <td>Price</td>
+            <td>Qty</td>
+            <td>Total</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td colspan="3">Maria Anders</td>
+
+            <td>Price</td>
+            <td>Qty</td>
+            <td>Total</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td colspan="3">Maria Anders</td>
+
+            <td>Price</td>
+            <td>Qty</td>
+            <td>Total</td>
+          </tr>
         </table>
-        
+
 
         <!-- spacer -->
 
         <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>  
-               <td height="25" bgcolor="#fef6f2" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
-            </tr>
+          <tr>
+            <td height="25" bgcolor="#fef6f2" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+          </tr>
         </table>
-        
+
 
         <!-- for additional details -->
 
         <table class="additional-detail" bgcolor="#fef6f2">
-            <tr>
-                <td  colspan="4" class="header-text" bgcolor="#fef6f2"> <h5 style="margin:0px;padding:0px;">Thank you for your business</h5></td>
-             
-              <td  class="header-text" colspan="4" bgcolor="#fef6f2"> <h5 style="margin:0px;padding:0px;">Sub Total :  <i class="fas fa-rupee-sign"></i><%= details.subTotal %></h5> </td>
-            
-
-
-
-              <table bgcolor="#fef6f2" width="95%">
-                
-                  <tr>
-                      <td  class="empty" bgcolor="#fef6f2"></td>
-                      <td ><div style="display:flex;justify-content:flex-end;"><button class="invoice-btn">Total: <i class="fas fa-rupee-sign"></i><%= details.total %></button></td>
-                      
-                      
-                      
-                    </tr>
-
-
-
-              </table>
-
-
-              <table width="95%">
-              <div class="container-flex" style="display:flex;flex-direction: column;width:50%;margin:auto;align-items:center;justify-content: center;background:#fef6f2;">
-                 
-                  <div class="row"><span style="color:rgba(0,0,0,0.8);background:#fef6f2;">Contact us <span style="font-weight:bold;"> :</span></span> <span style="color:rgba(0,0,0,0.7);">care@zypher.co</span></div>
-                  <div class="row"><span style="color:rgba(0,0,0,0.8);background:#fef6f2;">Address</span> <span style="font-weight:bold;"> :</span> <span style="font-size:12px;color:rgba(0,0,0,0.7);">91 TECHNOLOGIES PRIVATE LIMITED
-                    1190-80/1, 26th Main Road, 9th Block
-                                    Jayanagar, Bengaluru - 560069</span></div>
-                
-                  <div style="margin-top:10px;
-                  font-size:16px;">
-              
-
-                    <a href="https://www.facebook.com/zyphercrew">   <i class="fab fa-facebook-f" style="font-size:20px;padding:6px;color:#4267b2;"></i></a>
-                 <a href="https://twitter.com/Zypher_Crew"> <i class="fab fa-twitter"  style="font-size:20px;padding:6px;color:#38A1F3;"></i></a>
-                  <a href="https://www.linkedin.com/company/teamzypher"> <i class="fab fa-linkedin"  style="font-size:20px;padding:6px;color:#0077B5;"></i></a>
-
-                  </div>
-                </div>
-                </table>
-                 
-                 
-                  
-                </div>
-            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-                  <tr>  
-                     <td height="28" bgcolor="#fef6f2"style="font-size: 0px; line-height: 0px;">&nbsp;</td>
-                  </tr>
-              </table>
-              
-            
+          <tr>
+            <td colspan="4" class="header-text" bgcolor="#fef6f2">
+              <h5 style="margin:0px;padding:0px;">Thank you for your business</h5>
             </td>
-            <!--End of table td  -->
-            <td>&nbsp;</td>
-            </tr>
 
-               
-              
-
+            <td class="header-text" colspan="4" bgcolor="#fef6f2">
+              <h5 style="margin:0px;padding:0px;">Sub Total : <i class="fas fa-rupee-sign"></i><%= details.subTotal %>
+              </h5>
+            </td>
 
 
 
 
-          </table>
-          <!--/end wrapper-->
+            <table bgcolor="#fef6f2" width="95%">
 
-              <!-- spancer -->
-            
-
-
-
-         
-            
-
-             
+              <tr>
+                <td class="empty" bgcolor="#fef6f2"></td>
+                <td>
+                  <div style="display:flex;justify-content:flex-end;"><button class="invoice-btn">Total: <i
+                        class="fas fa-rupee-sign"></i><%= details.total %></button>
+                </td>
 
 
-              <!-- spacer -->
-              
-            
 
-              
-                                  
-           
-                
+              </tr>
 
+
+
+            </table>
+
+
+            <table width="95%">
+              <div class="container-flex"
+                style="display:flex;flex-direction: column;width:50%;margin:auto;align-items:center;justify-content: center;background:#fef6f2;">
+
+                <div class="row"><span style="color:rgba(0,0,0,0.8);background:#fef6f2;">Contact us <span
+                      style="font-weight:bold;"> :</span></span> <span
+                    style="color:rgba(0,0,0,0.7);">care@zypher.co</span></div>
+                <div class="row"><span style="color:rgba(0,0,0,0.8);background:#fef6f2;">Address</span> <span
+                    style="font-weight:bold;"> :</span> <span style="font-size:12px;color:rgba(0,0,0,0.7);">91
+                    TECHNOLOGIES PRIVATE LIMITED
+                    1190-80/1, 26th Main Road, 9th Block
+                    Jayanagar, Bengaluru - 560069</span></div>
+
+                <div style="margin-top:10px;
+                  font-size:16px;">
+
+
+                  <a href="https://www.facebook.com/zyphercrew"> <i class="fab fa-facebook-f"
+                      style="font-size:20px;padding:6px;color:#4267b2;"></i></a>
+                  <a href="https://twitter.com/Zypher_Crew"> <i class="fab fa-twitter"
+                      style="font-size:20px;padding:6px;color:#38A1F3;"></i></a>
+                  <a href="https://www.linkedin.com/company/teamzypher"> <i class="fab fa-linkedin"
+                      style="font-size:20px;padding:6px;color:#0077B5;"></i></a>
+
+                </div>
+              </div>
+            </table>
+            <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="28" bgcolor="#fef6f2" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+              </tr>
+            </table>
+      </td>
+      <!--End of table td  -->
+      
     
-  
 
-  
- 
+  <td>&nbsp;</td>
 
-  
+</tr>
+</table>
 
 </body>
+
 </html>

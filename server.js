@@ -1,5 +1,4 @@
 
-
 var express = require('express');
 var app = express();
 app.use( express.static( "public" ) );
@@ -64,6 +63,10 @@ app.get('/welcome',function(req,res){
 res.render('pages/welcome');
 });
 
+app.get('/reminder',function(req,res){
+    res.render('pages/reminder');
+    });
+    
 
 app.get('/customize', function(req, res) {
     res.render('pages/customize');
@@ -75,6 +78,19 @@ app.get('/zypher', function(req, res) {
 app.get('/wtest',function(req, res){
     res.render('pages/testwelcome')
 });
+
+app.get('/vikas',function(req, res){
+    res.render('pages/vikasinvoice')
+});
+
+app.get('/newarrival',function(req, res){
+    res.render('pages/newArrival')
+});
+
+app.get('/dew',function(req, res){
+    res.render('pages/invoiceDew')
+});
+
 
 app.listen(8080);
 console.log('8080 is the magic port');
