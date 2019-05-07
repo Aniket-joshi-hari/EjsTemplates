@@ -19,8 +19,15 @@
     const books=[{bookName:'book1',author:'author1',image:'./booka.png'},
     {bookName:'book2',author:'author2',image:'./8.jpg'},
     {bookName:'book3',author:'author3',image:'./9.jpg'},
-    {bookName:'book3',author:'author3',image:'./10.jpg'},
-    {bookName:'book4',author:'author4',image:'./11.jpg'}
+    {bookName:'book4',author:'author4',image:'./10.jpg'},
+    {bookName:'book5',author:'author5',image:'./11.jpg'},
+    {bookName:'book6',author:'author6',image:'./12.jpg'},
+    {bookName:'book7',author:'author7',image:'./13.jpg'},
+    {bookName:'book8',author:'author8',image:'./14.jpg'},
+    {bookName:'book9',author:'author9',image:'./15.jpg'},
+    {bookName:'book10',author:'author10',image:'./16.png'},
+    {bookName:'book11',author:'author11',image:'./17.png'},
+    {bookName:'book12',author:'author12',image:'./18.png'},
     ];
     %>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="font-family: 'Raleway', sans-serif;">
@@ -105,41 +112,29 @@
                         </tr>
                         <tr>
                             <td>
-                            <table align="center" width="600"><tr>
                                 
-                                      <% books.map(function(event,index,arr){ %> 
-                                    
-                                    <td width="150" align="center">
-                                        <img src="<%= event.image %>" width="120" height="170" /> 
-                                    </td>
-                                   
-                                    <!-- <% if(index >3) { %>
-                                        
-                                    <% }; %> -->
-                                    <% }); %>
-                                </tr></table>
                                 
-                                <table align="center" width="600">
-                                  
+                                <table align="center" width="600"> 
                                 <% var rows=3 %>
                                 <% var cols=books.length %>
                                 <% var c=0 %>
-                                <% for(var r=0; r < rows; r++) { %>
-                                <tr><% for( c  ; c < 4  ; c++){ %>
-                                   
-                                    <td align="center"><%= books[c].bookName %>
-                                       
-                                        <img src="<%= books[c].image %>" height="170" width="120"/> </td>
-                                     
-                                       
-                                        <% } %>
-                                       
-                                </tr>
-                                <% } %>
                                
-                                   
-                            
+                                <% for( c  ; c < cols ; c++) { %>
+                                   <% if( c%4 == 0) { %>
+                                <tr>
+                                <% } %>
+                                    <td align="center" style="">
+                                       
+                                        <%= books[c].bookName %>
                                       
+                                        <img src="<%= books[c].image %>" height="170" width="120"/> 
+                                    </td>
+
+                                    <% } %>
+                                    <% if( c%4 == 0) { %>
+                                    </tr>
+                                    <% } %>
+                                 
                                   </table>
 
                             </td>
