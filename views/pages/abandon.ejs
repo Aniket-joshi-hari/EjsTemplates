@@ -1,0 +1,145 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Abandon</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+     @media only screen and (max-width: 400px) {
+      td[class="for-mobile"] table,td[class="for-mobile"] img{
+        width:100%;
+
+      }
+     }
+    </style>
+</head>
+<body>
+    <% 
+   
+    const cartAbandon=[{bookName:'book1',author:'author1',image:'./booka.png'},
+    {bookName:'book2',author:'author2',image:'./8.jpg'},
+    {bookName:'book6',author:'author6',image:'./13.jpg'},
+    {bookName:'book12',author:'author12',image:'./18.png'},
+    ];
+
+  
+   %>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="font-family: 'Raleway', sans-serif;">
+
+    <!-- START HEADER/BANNER -->
+    
+            <tbody><tr>
+                <td align="center">
+                    <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="center"  valign="top" background="design2.jpg" bgcolor="#66809b" style="background-size:cover; background-position:top;height:300;">
+                                <table class="col-600" width="600" height="350" border="0" align="center" cellpadding="0" cellspacing="0">
+    
+                                    <tbody>
+                                    <tr>
+                                        <td  height="27" align="left" style="font-size: 5px;color: #fff; font-weight: 400; padding-left:8%;">
+                                              
+                                    </td></tr>
+                                    <tr>
+                                        <td align="left" valign="top" style="padding-left:5%;font-family: 'Raleway', sans-serif; font-size:37px; color:#ffffff; line-height:24px; font-weight: bold; letter-spacing: 7px;">
+                                               ! We Noticed  <span style="font-family: 'Raleway', sans-serif; font-size:37px; color:#ffffff; line-height:39px; font-weight: 300; letter-spacing: 7px;">You left Something behind</span>
+                                        </td>
+                                    </tr>
+    
+                                   
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-left:20px; margin-right:20px; border-left: 1px solid #dbd9d9; border-right: 1px solid #dbd9d9;">
+                        <tbody><tr>
+                            <td height="35"></td>
+                        </tr>
+    
+                        <tr>
+                            <td align="center" style="font-family: 'Raleway', sans-serif; font-size:22px; font-weight: bold; color:#2a3a4b;">Your Books</td>
+                        </tr>
+    
+                        <tr>
+                            <td height="10"></td>
+                        </tr>
+    
+                    </tbody></table>
+                </td>
+                </tr>
+                
+            <tr>
+                <td align="center">
+                    <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="border-left: 1px solid #dbd9d9; border-right: 1px solid #dbd9d9; ">
+                        <tbody>
+                        <tr>
+                            <td>
+                                         <table align="center" width="600" cellspacing="5" style="color:rgba(0,0,0,0.7);"> 
+                                            <% var rows=3 %>
+                                            <% var cols=cartAbandon.length %>
+                                            <% var c=0 %>
+                                           
+                                            <% for( c  ; c < cols ; c++) { %>
+                                               <% if( c%4 == 0) { %>
+                                            <tr>
+                                            <% } %>
+                                                <td class="for-mobile" align="center" style="padding-bottom:5%;border:1px solid #ccc;">
+                                                   
+                                                    <img src="<%= cartAbandon[c].image %>" height="150" width="140"/> 
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                          <%= cartAbandon[c].bookName %>
+                                                        </td>
+                                                        </tr>
+                                                        <tr>
+                                                        <td>
+                                                           <%= cartAbandon[c].author %>
+                                                      </td>
+                                                      </tr>
+                                                    </table>
+                                                </td>
+            
+                                                <% } %>
+                                                <% if( c%4 == 0) { %>
+                                                </tr>
+                                                <% } %>
+                                        </table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+            <tr>
+                <td height="14">
+                </td>
+            </tr>
+    
+            <tr>
+                    <td align="center">
+                        <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-left:20px; margin-right:20px;">
+                           <a href="#"> <button style="padding:8px; background:#F37621 ;border:none;color:#fff;border-radius:5px;">Continue to Shopping</button></a>
+                    </td>
+                </tr>
+        
+
+
+            <tr>
+                <td align="center" height="30">
+                    <table class="col-600" width="600" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-left:20px; margin-right:20px;">
+    
+                </td>
+            </tr>
+    
+    <!-- END FOOTER -->        
+                        
+            </tbody></table>
+                </body>
+                </html>

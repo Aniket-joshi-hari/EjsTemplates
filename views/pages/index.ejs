@@ -1,13 +1,14 @@
-<head>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<html>
+  <head>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Caption:400,700" rel="stylesheet" type="text/css">
     <!--[if (gte mso 9)|(IE)]><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" /><![endif]-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+   <title>Delivered</title>
     <style type="text/css">
       @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Caption:400,700);
       /* Reset Styles */
@@ -26,12 +27,7 @@
       font-family: inherit !important;font-weight: inherit !important;
       line-height: inherit !important;}
 
-      .footer-nav .PTSans {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width:100%;
-      } 
+      
 
 
       .footer-nav .PTSans .styles {
@@ -166,14 +162,7 @@
       
         
 
-      .footer-nav .PTSans {
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-        margin-bottom:50px;
-        
-      } 
+      
 
       .footer-nav .styles {
         display: block !important;
@@ -220,6 +209,37 @@
   </head>
   
   <body>
+      <% 
+   
+      const booksDelivered=[{bookName:'book1',author:'author1',image:'./booka.png'},
+      {bookName:'book2',author:'author2',image:'./8.jpg'},
+      {bookName:'book3',author:'author3',image:'./9.jpg'},
+      {bookName:'book4',author:'author4',image:'./10.jpg'},
+      {bookName:'book5',author:'author5',image:'./11.jpg'},
+      {bookName:'book6',author:'author6',image:'./12.jpg'},
+      {bookName:'book7',author:'author7',image:'./13.jpg'},
+      {bookName:'book8',author:'author8',image:'./14.jpg'},
+      {bookName:'book9',author:'author9',image:'./15.jpg'},
+      {bookName:'book10',author:'author10',image:'./16.png'},
+      {bookName:'book11',author:'author11',image:'./17.png'},
+      {bookName:'book12',author:'author12',image:'./18.png'},
+      ];
+      
+      const booksReturn=[ {bookName:'book4',author:'author4',image:'./10.jpg'},
+      {bookName:'book5',author:'author5',image:'./11.jpg'},
+      {bookName:'book6',author:'author6',image:'./12.jpg'},
+      {bookName:'book7',author:'author7',image:'./13.jpg'},
+      {bookName:'book8',author:'author8',image:'./14.jpg'},
+      {bookName:'book9',author:'author9',image:'./15.jpg'},
+      {bookName:'book10',author:'author10',image:'./16.png'},
+      {bookName:'book11',author:'author11',image:'./17.png'},];
+
+      var currentDate = new Date();
+      var date = currentDate.getDate();
+      var month = currentDate.getMonth(); 
+      var year = currentDate.getFullYear();
+      var deliveryDate = (date + 2 ) + '/' + month + '/' + year ;
+      %>
     <table width="100%" bgcolor="#ffffff" cellpadding="0" cellspacing="0" border="0">
       <tbody>
         <tr>
@@ -232,7 +252,7 @@
                     <!-- Preheader -->
                     <table class="mobileHide" width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tbody>
-                        <tr style="mso-hide:all; width:0; max-height:0; overflow:hidden; display:none; float:left;">
+                        <tr style="width:0; max-height:0; overflow:hidden; display:none; float:left;">
                           <td style="font-family:Arial, Helvetica, sans-serif;font-size:11px; color:#666666; text-align:left; padding:20px 0;">Here’s your coupon!</td>
                           <td style="font-family:Arial, Helvetica, sans-serif;font-size:11px; color:#666666; text-align:right; padding:20px 0;"><a href="http://t.lt02.net/q/HQAr9HCWJxCph7mhC3hxc_0JMTHr7dyP1_j-chmdhKm4iQewfqDyTn" title="View in Browser" target="_blank" style="color:#666666; text-decoration:underline;"><strong style="font-weight:normal;">View in Browser</strong></a></td>
                         </tr>
@@ -264,8 +284,9 @@
                                           <td bgcolor="#315BB0 " height="100">
                                           <table width="100%">
                                             <tr>
-                                              <td width="200" align="left" style="color:#fff;padding-left:10px;font-size:32px;font-weight: bold; ">
-                                                Bereturn
+                                              <td width="200" align="left" style="color:#fff;padding-left:10px; ">
+                                                  <img  
+                                                  vspace="0"height="80" width="180" hspace="0" border="0" src="./logo.png" alt="Headline here" /></td>
                                               </td>
                                               <td width="20"></td>
                                               <td width="40"></td>
@@ -348,7 +369,7 @@
                                   <table  align="center" cellpadding="2" cellspacing="0" border="0" style="margin-bottom:30px;">
                                       <tbody cellpadding="2" >
                                         <tr>
-                                          <td class="copy13 PTSansCaption paddingTop20" style="font-family:Arial, Helvetica, sans-serif;margin:5px;font-size:14px; color:#000; text-align:center; font-weight:bold; padding:74px 0 0;text-transform:uppercase;letter-spacing:.1em;"><h4 style="color:336BB9;font-weight:bold;">Books To Order </td>
+                                          <td class="copy13 PTSansCaption paddingTop20" style="font-family:Arial, Helvetica, sans-serif;margin:5px;font-size:14px; color:#000; text-align:center; font-weight:bold; padding:74px 0 0;text-transform:uppercase;letter-spacing:.1em;"><h4 style="color:336BB9;font-weight:bold;">Books Delivered </td>
                                         </tr>
                                       </tbody>
                                     </table>
@@ -358,16 +379,38 @@
                                       <tbody>
                                         <tr>
                                           <td class="" align="center">
-                                    <table class ="footer-nav" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+                                    <table  width="100%" align="center" cellpadding="0" cellspacing="1" border="0">
                                       <tbody>
                                         
-                                        <tr style="display:flex;flex-direction: row;width: 80%;margin:auto;justify-content: space-around;" >
-                                          <td class="PTSans" > 
-                                          <%  customer.map(function(evnt){ %>
-                                          <div class="styles" ><%= evnt.name %></div>
-                                       
-                                     
-                                      <% }); %>
+                                        <tr>
+                                          <td> 
+                                              <table align="center" width="600" cellspacing="4" style="color:rgba(0,0,0,0.7);"> 
+                                                  <% var rows=3 %>
+                                                  <% var cols=booksDelivered.length %>
+                                                  <% var c=0 %>
+                                                 
+                                                  <% for( c  ; c < cols ; c++) { %>
+                                                     <% if( c%4 == 0) { %>
+                                                  <tr>
+                                                  <% } %>
+                                                      <td align="center" style="padding-bottom:5%;border:1px solid #ccc;">
+                                                         
+                                                          <img src="<%= booksDelivered[c].image %>" height="170" width="120"/> 
+                                                          <table><tr><td align="center">
+                                                          <%= booksDelivered[c].bookName %>
+                                                              </td></tr>
+                                                              <tr>
+                                                          <td align="center">
+                                                          <%= booksDelivered[c].author %>
+                                                      </td></tr></table>
+                                                      </td>
+                  
+                                                      <% } %>
+                                                      <% if( c%4 == 0) { %>
+                                                      </tr>
+                                                      <% } %>
+                                                   
+                                                    </table>
                                     </td>
                                         </tr>
                                       </tbody>
@@ -393,13 +436,39 @@
                                         <tbody>
                                           <tr>
                                             <td class="" align="center">
-                                      <table class ="footer-nav" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+                                      <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
                                         <tbody>
-                                          <tr style="display:flex;flex-direction: row;width: 80%;margin:auto;justify-content: space-around;" >
-                                            <td class="PTSans" > 
-                                          <%  bookstoreturn.map(function(retun){%>
-                                            <div class="styles" ><%= retun.name %></div>
-                                            <% }); %>
+                                          <tr >
+                                            <td  > 
+                                                <table align="center" width="600" cellspacing="3" style="color:rgba(0,0,0,0.7);"> 
+                                                    <% var rows=3 %>
+                                                    <% var cols=booksReturn.length %>
+                                                    <% var c=0 %>
+                                                  <% if(booksReturn.length){ %>
+                                                    <% for( c  ; c < cols ; c++) { %>
+                                                       <% if( c%4 == 0) { %>
+                                                    <tr>
+                                                    <% } %>
+                                                        <td align="center" style="padding-bottom:5%;border:1px solid #ccc;">
+                                                           
+                                                            <img src="<%= booksReturn[c].image %>" height="170" width="120"/> 
+                                                            <table><tr><td align="center">
+                                                            <%= booksReturn[c].bookName %>
+                                                                </td></tr>
+                                                                <tr>
+                                                            <td align="center">
+                                                            <%= booksReturn[c].author %>
+                                                        </td></tr></table>
+                                                        </td>
+                    
+                                                        <% } %>
+                                                        <% if( c%4 == 0) { %>
+                                                        </tr>
+                                                        <% } %>
+                                                     <% } %>
+                                                     <% if(booksReturn.length == 0){ %>
+                                                    <tr><td align="center" style="font-size:18px;">There is no book to return</td></tr> 
+                                                  <% } %>                                                     </table>
                                       </td>
                                           </tr>
                                         </tbody>
@@ -464,11 +533,5 @@
                 </tr>
               </tbody>
             </table>
-            <div style="display:none; white-space:nowrap; font:15px courier; line-height:0;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
-            <!-- Gmail Fix END -->
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  
   </body>   
+  </html>

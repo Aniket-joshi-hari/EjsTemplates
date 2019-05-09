@@ -87,8 +87,24 @@ app.get('/newarrival',function(req, res){
     res.render('pages/newArrival')
 });
 
-app.get('/dew',function(req, res){
+app.get('/due',function(req, res){
     res.render('pages/invoiceDew')
+});
+
+app.get('/abandon',function(req, res){
+    res.render('pages/abandon')
+});
+
+app.get('/active',function(req, res){
+    res.render('pages/customerPaidUp')
+});
+
+app.get('/survey',function(req, res){
+    res.render('pages/survey')
+});
+
+app.get('/welcomea',function(req, res){
+    res.render('pages/welcomeAgain')
 });
 
 
